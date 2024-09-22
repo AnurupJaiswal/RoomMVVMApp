@@ -24,5 +24,5 @@ The application allows users to register, log in, and manage their profiles, dem
 ## Screenshots
 
 ### Login Screen
-![Login Screen] [media_20240922_154248_2176704891974723546](https://github.com/user-attachments/assets/a841269e-f237-4a76-acf4-3e82eaed1a83)
+![Login Screen] ![media_20240922_154248_2176704891974723546](https://github.com/user-attachments/assets/a841269e-f237-4a76-acf4-3e82eaed1a83)
 
