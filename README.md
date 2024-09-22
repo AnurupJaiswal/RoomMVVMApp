@@ -22,9 +22,7 @@ The application allows users to register, log in, and manage their profiles, dem
 
 
 ## Screenshots
-![Login Screen] ![media_20240922_154248_2176704891974723546](https://github.com/user-attachments/assets/a841269e-f237-4a76-acf4-3e82eaed1a83)
-
-![Create Account Screen] ![media_20240922_154248_158702384223289788](https://github.com/user-attachments/assets/6fdb5f01-71e3-4a7a-89fd-4ca7a94d00bf)
+![Login Screen] ![media_20240922_154248_2176704891974723546](https://github.com/user-attachments/assets/a841269e-f237-4a76-acf4-3e82eaed1a83)  ![Create Account Screen] ![media_20240922_154248_158702384223289788](https://github.com/user-attachments/assets/6fdb5f01-71e3-4a7a-89fd-4ca7a94d00bf)
 
 ![Edit Profile Screen] ![media_20240922_154248_9057636471664609309](https://github.com/user-attachments/assets/3587b029-4769-492e-b80a-b4f7e3101129)
 
