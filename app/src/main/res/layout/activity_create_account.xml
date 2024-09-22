@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.anurupjaiswal.roomdatabase.viewmodel.UserViewModel" />
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="3dp"
+        android:padding="12dp"
+        android:orientation="vertical">
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/poppins_semi_bold"
+            android:text="@string/create_your_account"
+            android:layout_marginTop="50dp"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="3dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/full_name"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+                    <EditText
+                        android:id="@+id/etName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/input_custom"
+                        android:fontFamily="@font/poppins_regular"
+                        android:includeFontPadding="false"
+                        android:singleLine="true"
+                        android:hint="@string/name"
+                        android:text="@={viewModel.name}"
+                        android:inputType="textEmailAddress"
+                        android:padding="13dp"
+                        android:paddingVertical="5dp"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white"
+                        android:textSize="12sp" />
+
+
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="3dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="email*"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+
+
+                    <EditText
+                        android:id="@+id/etEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/input_custom"
+                        android:hint="@string/enter_email"
+                        android:inputType="textEmailAddress"
+                        android:padding="13dp"
+                        android:text="@={viewModel.email}"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white"
+                        android:textSize="12sp"
+                        android:autofillHints="emailAddress" />
+
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="3dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Country*"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+
+
+        <EditText
+            android:id="@+id/etCountry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/input_custom"
+            android:hint="Enter Country"
+            android:inputType="textEmailAddress"
+            android:padding="13dp"
+            android:text="@={viewModel.country}"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="12sp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="3dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="State*"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+
+
+        <EditText
+            android:id="@+id/etState"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/input_custom"
+            android:hint="Enter State"
+            android:inputType="textEmailAddress"
+            android:padding="13dp"
+            android:text="@={viewModel.state}"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="12sp"
+            android:autofillHints="emailAddress" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="9dp"
+            android:layout_marginBottom="3dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="password*"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            />
+
+
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/input_custom"
+            android:fontFamily="@font/poppins_medium"
+            android:hint="Enter Password"
+            android:includeFontPadding="false"
+            android:padding="13dp"
+            android:singleLine="true"
+            android:text="@={viewModel.password}"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="12sp" />
+
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/mcvSignup"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="20dp"
+                    app:cardBackgroundColor="@color/primaryColor"
+                    app:cardCornerRadius="30dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="@color/primaryColor"
+                    app:strokeWidth="0.7dp"
+                    android:onClick="@{() -> viewModel.onSignupClicked()}">
+
+
+                    <TextView
+                        android:id="@+id/tvSignup"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/signup"
+                        android:textSize="18sp"
+                        android:includeFontPadding="false"
+                        android:fontFamily="@font/poppins_regular"                        android:textColor="@color/black"
+                        android:gravity="center"
+
+                        />
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+
+
+
+</layout>

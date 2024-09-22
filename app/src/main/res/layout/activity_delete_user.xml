@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.anurupjaiswal.roomdatabase.viewmodel.UserViewModel" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        tools:context=".ui.DeleteUserActivity">
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/mcvUserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:strokeWidth="1.2dp"
+            app:cardBackgroundColor="@color/black"
+            android:layout_marginTop="20dp"
+            app:cardCornerRadius="30dp"
+            app:strokeColor="@color/strokeColor"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/etDeleteEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                android:background="@null"
+                android:padding="13dp"
+                android:enabled="false"
+                android:text="@={viewModel.email}"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="12sp"
+                tools:ignore="Autofill" />
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/mcvDelete"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            app:cardBackgroundColor="@color/primaryColor"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="0dp"
+            app:strokeColor="@color/black"
+            app:strokeWidth="0.7dp"
+            android:onClick="@{() -> viewModel.deleteUser()}" >  <!-- Bind deleteUser action -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/delete"
+                android:textSize="18sp"
+                android:includeFontPadding="false"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/black"
+                android:gravity="center" />
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+</layout>

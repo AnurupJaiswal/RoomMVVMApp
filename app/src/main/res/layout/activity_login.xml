@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.anurupjaiswal.roomdatabase.viewmodel.UserViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@color/black"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:text="@string/app_name"
+                android:textColor="@color/white"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="3dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/email_"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input_custom"
+                android:fontFamily="@font/poppins_regular"
+                android:includeFontPadding="false"
+                android:inputType="textEmailAddress"
+                android:padding="13dp"
+                android:singleLine="true"
+                android:hint="@string/enter_email"
+
+                android:text="@={viewModel.email}"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="12sp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="9dp"
+                android:layout_marginBottom="3dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="password*"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input_custom"
+                android:fontFamily="@font/poppins_medium"
+                android:hint="@string/enter_password"
+                android:includeFontPadding="false"
+                android:padding="13dp"
+                android:singleLine="true"
+                android:text="@={viewModel.password}"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="12sp" />
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/mcvLogin"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                app:cardBackgroundColor="@color/primaryColor"
+                app:cardCornerRadius="30dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/primaryColor"
+                app:strokeWidth="0.7dp"
+                android:onClick="@{()-> viewModel.login()}"
+                >
+
+
+                <TextView
+                    android:id="@+id/tvLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/login"
+                    android:includeFontPadding="false"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+        </LinearLayout>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/mcvCreateAccount"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            app:cardBackgroundColor="@color/black"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="0dp"
+            android:layout_alignParentBottom="true"
+            app:strokeColor="@color/primaryColor"
+            app:strokeWidth="0.7dp">
+
+
+            <TextView
+                android:id="@+id/tvSignup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center"
+
+                android:includeFontPadding="false"
+                android:text="@string/create_new_account"
+                android:textColor="@color/primaryColor"
+                android:textSize="15sp" />
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+    </RelativeLayout>
+</layout>
