@@ -19,3 +19,10 @@ The application allows users to register, log in, and manage their profiles, dem
 - **MVVM Architecture**: For separating concerns and promoting testable code.
 - **LiveData**: To observe data changes in the UI.
 - **Data Binding**: To bind UI components directly to data sources.
+
+
+## Screenshots
+
+### Login Screen
+![Login Screen] [media_20240922_154248_2176704891974723546](https://github.com/user-attachments/assets/a841269e-f237-4a76-acf4-3e82eaed1a83)
+
